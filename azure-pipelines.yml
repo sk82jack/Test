@@ -1,0 +1,17 @@
+name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+- master
+pr:
+- master
+jobs:
+- job: Test_Build_Deploy
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+    - task: Powershell@2
+      displayName: 'Test'
+      inputs:
+        targetType: 'filePath'
+        filePath: .\Test.ps1
+        errorActionPreference: 'stop'
+        failOnStderr: true
