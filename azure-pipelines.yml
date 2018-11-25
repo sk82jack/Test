@@ -11,7 +11,7 @@ jobs:
     - task: Powershell@2
       displayName: 'Test'
       env:
-        BUILD_NAME: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+        BUILD_NAME: $(Build.BuildNumber)
       inputs:
         targetType: 'filePath'
         filePath: .\Test.ps1
