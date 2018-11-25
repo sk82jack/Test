@@ -12,3 +12,9 @@ if ($ENV:TEST2) {
 else {
     Write-Error 'Failed on variable $ENV:TEST2'
 }
+if ($ENV:TEST3) {
+    "This variable is {0}" -f $ENV:TEST3
+}
+else {
+    Write-Error 'Failed on variable $ENV:TEST2'
+}
