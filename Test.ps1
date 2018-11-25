@@ -22,3 +22,9 @@ if ($ENV:TEST3) {
 else {
     Write-Error 'Failed on variable $ENV:TEST3'
 }
+if ($ENV:GITHUB_PAT) {
+    "This variable is {0}" - $ENV:GITHUB_PAT
+}
+else {
+    Write-Error 'Failed on $ENV:GITHUB_PAT'
+}
