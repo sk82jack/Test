@@ -1,3 +1,5 @@
+$ENV:BUILD_NAME #| Out-File -FilePath .\BUILDVERSION.md -Force
+
 if ($ENV:TEST1) {
     "This variable is {}" -f $ENV:TEST1
 }
