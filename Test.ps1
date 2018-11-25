@@ -1,6 +1,6 @@
 $ENV:BUILD_NAME | Out-File -FilePath .\BUILDVERSION.md -Force
 "Contents of BUILDVERSION.md:`n"
-Get-Content -Path .\BUILVERSION.md
+Get-Content -Path .\BUILDVERSION.md
 
 if ($ENV:TEST1) {
     'This variable is {0}' -f $ENV:TEST1
