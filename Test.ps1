@@ -31,4 +31,5 @@ git config user.email 'sk82jack@hotmail.com'
 git config user.name 'sk82jack'
 git add .\BUILDVERSION.md
 git commit -m "Update build version ***NO_CI***"
-git push $GitHubUrl HEAD:master
+# --porcelain is because git sends output to stderr for some reason
+git push $GitHubUrl HEAD:master --porcelain
