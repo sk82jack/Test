@@ -12,6 +12,7 @@ jobs:
       displayName: 'Test'
       env:
         BUILD_NAME: $(Build.BuildNumber)
+        TEST2: $(random.name)
       inputs:
         targetType: 'filePath'
         filePath: .\Test.ps1
