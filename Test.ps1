@@ -30,6 +30,6 @@ $GitHubUrl = 'https://{0}@github.com/sk82jack/test.git' -f $ENV:GITHUB_PAT
 git config user.email 'sk82jack@hotmail.com'
 git config user.name 'sk82jack'
 git add .\BUILDVERSION.md
-git commit -m "Update build version ***NO_CI***"
+git commit -m "Update build version`n***NO_CI***"
 # --porcelain is because git sends output to stderr for some reason
 git push $GitHubUrl HEAD:master --porcelain
