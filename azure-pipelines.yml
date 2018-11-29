@@ -23,4 +23,5 @@ jobs:
 
     - powershell: . ./test.ps1
       displayName: 'Shortcut Syntax test on pwsh6'
-      pwsh: true
+      inputs:
+        pwsh: true
