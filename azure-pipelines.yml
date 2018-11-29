@@ -24,5 +24,6 @@ jobs:
     - task: Powershell@2
       displayName: 'Shortcut Syntax test on pwsh6'
       inputs:
-        script: ./test.ps1
+        targetType: inline
+        script: . ./test.ps1
         pwsh: true
