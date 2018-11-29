@@ -20,3 +20,7 @@ jobs:
         filePath: .\Test.ps1
         errorActionPreference: 'stop'
         failOnStderr: true
+
+    - powershell: . ./test.ps1
+      displayName: 'Shortcut Syntax test on pwsh6'
+      pwsh: true
