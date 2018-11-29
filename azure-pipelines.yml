@@ -22,7 +22,7 @@ jobs:
         failOnStderr: true
 
     - task: Powershell@2
-      script: . ./test.ps1
       displayName: 'Shortcut Syntax test on pwsh6'
       inputs:
+        script: . ./test.ps1
         pwsh: true
