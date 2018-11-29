@@ -21,7 +21,8 @@ jobs:
         errorActionPreference: 'stop'
         failOnStderr: true
 
-    - powershell: . ./test.ps1
+    - task: Powershell@2
+      script: . ./test.ps1
       displayName: 'Shortcut Syntax test on pwsh6'
       inputs:
         pwsh: true
