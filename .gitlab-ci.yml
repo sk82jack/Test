@@ -1,0 +1,10 @@
+image: mcr.microsoft.com/powershell:latest
+stages:
+  - test
+tests:
+  stage: test
+  script:
+    - pwsh -command './build.ps1 -Task Test -Bootstrap -Verbose'
+  except:
+  - /updated readme.*|update readme.*s/
+  coverage: '/^Covered (\d+.\d+\%) of \d+ analyzed Commands in \d+ Files\.$/'
