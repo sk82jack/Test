@@ -4,6 +4,7 @@ stages:
 tests:
   stage: test
   script:
+    - apt-get update
     - apt-get install -y git
     - pwsh -command './build.ps1 -Task Test -Bootstrap -Verbose'
   except:
