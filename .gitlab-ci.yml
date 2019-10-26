@@ -1,11 +1,11 @@
 image: mcr.microsoft.com/powershell:latest
+before_script:
+    - apt-get update && apt-get install -y git
 stages:
   - test
 tests:
   stage: test
   script:
-    - apt-get update
-    - apt-get install -y git
     - pwsh -command './build.ps1 -Task Test -Bootstrap -Verbose'
   except:
   - /updated readme.*|update readme.*s/
