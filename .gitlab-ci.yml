@@ -1,6 +1,6 @@
 image: mcr.microsoft.com/powershell:latest
 before_script:
-    - apt-get update && apt-get install -y git
+    - apt-get update && apt-get install -y git > /dev/null
 stages:
   - test
 tests:
