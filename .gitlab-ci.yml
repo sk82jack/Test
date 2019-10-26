@@ -1,4 +1,6 @@
 image: mcr.microsoft.com/powershell:latest
+before_script:
+    - sudo apt-get install git -y
 stages:
   - test
 tests:

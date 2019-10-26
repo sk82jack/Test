@@ -14,3 +14,5 @@ param (
 if ($Bootstrap) {
     "Bootstrap has also been specified"
 }
+
+Get-Command git
